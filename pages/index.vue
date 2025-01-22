@@ -13,7 +13,7 @@
 import { ref } from "vue";
 import axios from "axios";
 
-const amount = ref(1000);
+const amount = ref(1);
 const handlePayment = async () => {
   try {
     const response = await axios.post("/api/line-pay-request", {
