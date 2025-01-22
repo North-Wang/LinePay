@@ -11,19 +11,19 @@
 
 <script setup>
 import { ref } from "vue";
-import axios from "axios";
+// import axios from "axios";
 
 const amount = ref(1);
 const handlePayment = async () => {
-  try {
-    const response = await axios.post("/api/line-pay-request", {
-      amount: amount.value,
-    });
-    console.log("支付請求成功:", response);
-    // 重定向用戶到支付頁面
-    window.location.href = response.data.info.paymentUrl.web;
-  } catch (error) {
-    console.error("支付請求失敗:", error);
-  }
+  // try {
+  //   const response = await axios.post("/api/line-pay-request", {
+  //     amount: amount.value,
+  //   });
+  //   console.log("支付請求成功:", response);
+  //   // 重定向用戶到支付頁面
+  //   window.location.href = response.data.info.paymentUrl.web;
+  // } catch (error) {
+  //   console.error("支付請求失敗:", error);
+  // }
 };
 </script>
